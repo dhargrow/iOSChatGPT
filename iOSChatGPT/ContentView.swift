@@ -6,16 +6,59 @@
 //
 
 import SwiftUI
+import OpenAISwift
+
+struct QuestionAnswer: Identifiable {
+    let id = UUID()
+
+    let question: String
+    var answer: String
+}
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+
+    let openAi = OpenAISwift(authToken: "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")
+
+    @State private var searchString: String = ""
+    @State private var questionAndAnswers: [QuestionAnswer] = []
+
+    private func performAISearch() {
+        openAi.sendCompletion(with: searchString) { result in
+            switch result {
+            case .success(let success):
+                let questionAndAnswer = QuestionAnswer(question: searchString, answer: success.choices.first?.text.trimmingCharacters(in: .whitespacesAndNewlines) ?? "")
+
+                questionAndAnswers.append(questionAndAnswer)
+                searchString = ""
+            case .failure(let failure):
+                print(failure.localizedDescription)
+            }
         }
-        .padding()
+    }
+
+    var body: some View {
+        NavigationView{
+            VStack {
+                HStack(alignment: .center) {
+                    TextField("Type here", text: $searchString)
+                        .onSubmit {
+                            if !searchString.isEmpty {
+                                performAISearch()
+                            }
+                        }
+                }
+                ScrollView {
+                    ForEach(questionAndAnswers) { qa in
+                        VStack(spacing: 10){
+                            Text(qa.question)
+                            Text(qa.answer)
+                        }
+                    }
+                }
+                Spacer()
+            }.navigationTitle("ChatGPT for iOS")
+                .navigationBarTitleDisplayMode(.inline)
+        }
     }
 }
 
