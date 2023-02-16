@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		1A1044682993512500A65C6B /* iOSChatGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1044672993512500A65C6B /* iOSChatGPTApp.swift */; };
-		1A10446A2993512500A65C6B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1044692993512500A65C6B /* ContentView.swift */; };
+		1A10446A2993512500A65C6B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1044692993512500A65C6B /* HomeView.swift */; };
 		1A10446C2993512700A65C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10446B2993512700A65C6B /* Assets.xcassets */; };
 		1A10446F2993512700A65C6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10446E2993512700A65C6B /* Preview Assets.xcassets */; };
 		1A10447A2993587900A65C6B /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1A1044792993587900A65C6B /* OpenAISwift */; };
 		1ABA3A8C299DE9E90059DEF6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA3A8B299DE9E90059DEF6 /* Environment.swift */; };
+		1ABA3A8F299DFD410059DEF6 /* HomeView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA3A8E299DFD410059DEF6 /* HomeView+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A1044642993512500A65C6B /* iOSChatGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSChatGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1044672993512500A65C6B /* iOSChatGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChatGPTApp.swift; sourceTree = "<group>"; };
-		1A1044692993512500A65C6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1A1044692993512500A65C6B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		1A10446B2993512700A65C6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A10446E2993512700A65C6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1ABA3A89299DE8430059DEF6 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		1ABA3A8A299DE9B50059DEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1ABA3A8B299DE9E90059DEF6 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		1ABA3A8E299DFD410059DEF6 /* HomeView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeView+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				1ABA3A8A299DE9B50059DEF6 /* Info.plist */,
-				1ABA3A88299DE7A50059DEF6 /* SupportingFiles */,
 				1A1044672993512500A65C6B /* iOSChatGPTApp.swift */,
-				1A1044692993512500A65C6B /* ContentView.swift */,
 				1A10446B2993512700A65C6B /* Assets.xcassets */,
+				1ABA3A8D299DFCE60059DEF6 /* HomeView */,
 				1A10446D2993512700A65C6B /* Preview Content */,
+				1ABA3A88299DE7A50059DEF6 /* SupportingFiles */,
 			);
 			path = iOSChatGPT;
 			sourceTree = "<group>";
@@ -82,6 +84,15 @@
 				1ABA3A8B299DE9E90059DEF6 /* Environment.swift */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1ABA3A8D299DFCE60059DEF6 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				1A1044692993512500A65C6B /* HomeView.swift */,
+				1ABA3A8E299DFD410059DEF6 /* HomeView+ViewModel.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A10446A2993512500A65C6B /* ContentView.swift in Sources */,
+				1A10446A2993512500A65C6B /* HomeView.swift in Sources */,
 				1ABA3A8C299DE9E90059DEF6 /* Environment.swift in Sources */,
+				1ABA3A8F299DFD410059DEF6 /* HomeView+ViewModel.swift in Sources */,
 				1A1044682993512500A65C6B /* iOSChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
