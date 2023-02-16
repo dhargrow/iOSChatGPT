@@ -29,6 +29,7 @@ DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM
+*.ds_store
 
 ## Playgrounds
 timeline.xctimeline
@@ -88,3 +89,7 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+
+### Custom
+iOSChatGPT/Info.plist
+*.xcconfig

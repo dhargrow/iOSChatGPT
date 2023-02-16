@@ -12,6 +12,7 @@
 		1A10446C2993512700A65C6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10446B2993512700A65C6B /* Assets.xcassets */; };
 		1A10446F2993512700A65C6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10446E2993512700A65C6B /* Preview Assets.xcassets */; };
 		1A10447A2993587900A65C6B /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1A1044792993587900A65C6B /* OpenAISwift */; };
+		1ABA3A8C299DE9E90059DEF6 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA3A8B299DE9E90059DEF6 /* Environment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,9 @@
 		1A1044692993512500A65C6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1A10446B2993512700A65C6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A10446E2993512700A65C6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1ABA3A89299DE8430059DEF6 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		1ABA3A8A299DE9B50059DEF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1ABA3A8B299DE9E90059DEF6 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 		1A1044662993512500A65C6B /* iOSChatGPT */ = {
 			isa = PBXGroup;
 			children = (
+				1ABA3A8A299DE9B50059DEF6 /* Info.plist */,
+				1ABA3A88299DE7A50059DEF6 /* SupportingFiles */,
 				1A1044672993512500A65C6B /* iOSChatGPTApp.swift */,
 				1A1044692993512500A65C6B /* ContentView.swift */,
 				1A10446B2993512700A65C6B /* Assets.xcassets */,
@@ -67,6 +73,15 @@
 				1A10446E2993512700A65C6B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1ABA3A88299DE7A50059DEF6 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA3A89299DE8430059DEF6 /* Development.xcconfig */,
+				1ABA3A8B299DE9E90059DEF6 /* Environment.swift */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A10446A2993512500A65C6B /* ContentView.swift in Sources */,
+				1ABA3A8C299DE9E90059DEF6 /* Environment.swift in Sources */,
 				1A1044682993512500A65C6B /* iOSChatGPTApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +171,7 @@
 /* Begin XCBuildConfiguration section */
 		1A1044702993512700A65C6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ABA3A89299DE8430059DEF6 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -215,6 +232,7 @@
 		};
 		1A1044712993512700A65C6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ABA3A89299DE8430059DEF6 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -278,6 +296,7 @@
 				DEVELOPMENT_TEAM = 6V5UDV5GUL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOSChatGPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +326,7 @@
 				DEVELOPMENT_TEAM = 6V5UDV5GUL;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOSChatGPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

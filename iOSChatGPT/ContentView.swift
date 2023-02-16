@@ -17,7 +17,7 @@ struct QuestionAnswer: Identifiable {
 
 struct ContentView: View {
 
-    let openAi = OpenAISwift(authToken: "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")
+    let openAi = OpenAISwift(authToken: Environment.apiKey)
 
     @State private var searchString: String = ""
     @State private var questionAndAnswers: [QuestionAnswer] = []
