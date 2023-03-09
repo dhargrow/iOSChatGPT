@@ -21,6 +21,7 @@ extension HomeView {
         
         @Published var searchString: String = ""
         @Published var questionAndAnswers: [QuestionAnswer] = []
+        @Published var showAlert: Bool = false
         
         
         func performAISearch() {
@@ -32,6 +33,9 @@ extension HomeView {
                     self.questionAndAnswers.append(questionAndAnswer)
                     self.searchString = ""
                 case .failure(let failure):
+                    DispatchQueue.main.async { [self] in
+                        showAlert.toggle()
+                    }
                     print(failure.localizedDescription)
                 }
             }

@@ -36,6 +36,9 @@ struct HomeView: View {
             }.navigationTitle("ChatGPT for iOS")
                 .navigationBarTitleDisplayMode(.inline)
         }
+        .alert("Message Could Not Be Processed" ,isPresented: $viewModel.showAlert) {
+            Button("Ok", role: .none){}
+        }
     }
 }
 
